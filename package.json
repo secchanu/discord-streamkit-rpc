@@ -14,9 +14,9 @@
   "author": "secchanu",
   "license": "MIT",
   "dependencies": {
-    "discord-rpc": "^4.0.1",
-    "puppeteer": "^19.2.2",
-    "@types/discord-rpc": "^4.0.3"
+    "@types/discord-rpc": "^4.0.3",
+    "discord-rpc": "github:secchanu/discord-rpc",
+    "puppeteer": "^19.2.2"
   },
   "devDependencies": {
     "ts-node": "^10.9.1",

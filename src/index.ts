@@ -8,7 +8,7 @@ export class Client extends RPC {
 
   async streamkit() {
     return new Promise<this>(async (resolve) => {
-      const browser = await launch();
+      const browser = await launch({ headless: "new" });
       const page = await browser.newPage();
       page.on("console", async (message) => {
         const json = (await message.args()[1]?.jsonValue()) as
@@ -38,7 +38,7 @@ export class Client extends RPC {
         const install = (
           await page.$x("//button[contains(., 'Install for OBS')]")
         )[0];
-        install.click();
+        await install.click();
       };
       await initPage();
     });
